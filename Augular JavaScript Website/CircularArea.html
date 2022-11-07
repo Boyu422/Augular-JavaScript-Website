@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Circular Area Calculator</title>
+
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+
+</head>
+<body>
+
+<div class="jumbotron text-center">
+    <h1><b>Computer Engineering Technology - Web Programming</b></h1>
+</div>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-3">
+            <nav class="navbar bg-light">
+                <ul class="nav flex-column">
+                    <a class="nav-link" href="index.html">Index</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="AreaCalculator.html">Area Calculator</a>
+                    </li>
+                    <a class="nav-link"  href="FibonacciCalculator.html">Fibonacci Calculator</a>
+                    </li>
+                    <a class="nav-link" href="GCDCalculator.html">GCD Calculator</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+
+    <div class="col-md-9" >
+        <div ng-app="myApp" ng-controller="myCtrl">
+            <h1>This program calculates the area of a circle.</h1>
+            <h4>Please enter the radius of the circle</h4>
+            <label>Radius: <input name="radius" ng-model="radius"
+                                 ng-change="calculateArea()"
+                                 type="number" min = "1" required/></label><br/>
+            <br>
+            <h4>Area of the circle: {{area}}</h4>
+
+        </div>
+
+        <script>
+            var app = angular.module('myApp', []);
+
+            app.controller('myCtrl', function($scope,  $window) {
+                $scope.radius = 1;
+                $scope.calculateArea = function () {
+                    $scope.area = $scope.radius * $scope.radius * Math.PI;
+                };
+            });
+        </script>
+
+    </div>
+</div>
+</div>
+
+<div class="jumbotron text-center" style="margin-bottom:0">
+    <p>Student Number:041003345</p>
+    <p>First Name:Boyu</p>
+    <p>Last Name:Li</p>
+    <p>Email Address:li000769@algonquinlive.com</p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>AngularJS Problems and Solution</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+</head>
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+
+        var state;
+        do {
+            state = true;
+            var option = prompt("Please enter the shape you want to calculate the area (1:Triangle, 2:Rectangle, 3:Circle)");
+            switch (option) {
+                case "1":
+                    window.open("TriangularArea.html");
+                    break;
+                case "2":
+                    window.open("RectangularArea.html");
+                    break;
+                case "3":
+                    window.open("CircularArea.html");
+                    break;
+                default:
+                    alert("The invalid option is from 1 to 3");
+                    state = false;
+            }
+        }while(state==false);
+
+</script>
+</body>
+</html>
